@@ -7,9 +7,24 @@ export default function Home() {
           <p className="text-zinc-600 mb-6">Hey Champ Lets Learn and Play!.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <a className="block text-center p-4 bg-rose-100 rounded-lg" href="/telugu">📖 Telugu</a>
-            <a className="block text-center p-4 bg-sky-100 rounded-lg" href="/maths">🔢 Maths</a>
-            <a className="block text-center p-4 bg-emerald-100 rounded-lg" href="/english">🔤 English</a>
+            <a
+              className="block text-center p-4 bg-rose-100 rounded-lg"
+              href="/telugu"
+            >
+              📖 Telugu
+            </a>
+            <a
+              className="block text-center p-4 bg-sky-100 rounded-lg"
+              href="/maths"
+            >
+              🔢 Maths
+            </a>
+            <a
+              className="block text-center p-4 bg-emerald-100 rounded-lg"
+              href="/english"
+            >
+              🔤 English
+            </a>
           </div>
         </div>
       </main>

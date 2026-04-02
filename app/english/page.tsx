@@ -1,12 +1,28 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 export default function EnglishPage() {
   const questions = [
-    { sentence: "The cat is ___", options: ["run", "running", "runs"], answer: "running" },
-    { sentence: "She ___ to school every day", options: ["go", "goes", "going"], answer: "goes" },
-    { sentence: "They are ___ cricket", options: ["play", "playing", "plays"], answer: "playing" },
-    { sentence: "I ___ a mango", options: ["eat", "eats", "eating"], answer: "eat" },
+    {
+      sentence: "The cat is ___",
+      options: ["run", "running", "runs"],
+      answer: "running",
+    },
+    {
+      sentence: "She ___ to school every day",
+      options: ["go", "goes", "going"],
+      answer: "goes",
+    },
+    {
+      sentence: "They are ___ cricket",
+      options: ["play", "playing", "plays"],
+      answer: "playing",
+    },
+    {
+      sentence: "I ___ a mango",
+      options: ["eat", "eats", "eating"],
+      answer: "eat",
+    },
   ];
 
   const [index, setIndex] = useState(0);

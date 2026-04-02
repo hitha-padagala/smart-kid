@@ -1,40 +1,40 @@
-"use client"
-import { useState } from "react"
+"use client";
+import { useState } from "react";
 
-const ops = ["+", "-", "×"]
+const ops = ["+", "-", "×"];
 const randomQuestion = () => {
-  const operator = ops[Math.floor(Math.random() * ops.length)]
-  let a = Math.floor(Math.random() * 10)
-  let b = Math.floor(Math.random() * 10)
-  if (operator === "-" && a < b) [a, b] = [b, a]
-  return { a, b, operator }
-}
+  const operator = ops[Math.floor(Math.random() * ops.length)];
+  let a = Math.floor(Math.random() * 10);
+  let b = Math.floor(Math.random() * 10);
+  if (operator === "-" && a < b) [a, b] = [b, a];
+  return { num1: a, num2: b, op: operator };
+};
 
 export default function MathsPage() {
-  const [{ num1, num2, op }, setQuestion] = useState(() => randomQuestion())
-  const [answer, setAnswer] = useState("")
-  const [score, setScore] = useState(0)
-  const [result, setResult] = useState("")
+  const [{ num1, num2, op }, setQuestion] = useState(() => randomQuestion());
+  const [answer, setAnswer] = useState("");
+  const [score, setScore] = useState(0);
+  const [result, setResult] = useState("");
 
   const correct = () => {
-    if (op === "+") return num1 + num2
-    if (op === "-") return num1 - num2
-    return num1 * num2
-  }
+    if (op === "+") return num1 + num2;
+    if (op === "-") return num1 - num2;
+    return num1 * num2;
+  };
 
   const check = () => {
     if (parseInt(answer || "NaN", 10) === correct()) {
-      setScore((s) => s + 1)
-      setResult("🎉 Correct!")
+      setScore((s) => s + 1);
+      setResult("🎉 Correct!");
     } else {
-      setResult("❌ Try again!")
+      setResult("❌ Try again!");
     }
-    setAnswer("")
+    setAnswer("");
     setTimeout(() => {
-      setResult("")
-      setQuestion(randomQuestion())
-    }, 1000)
-  }
+      setResult("");
+      setQuestion(randomQuestion());
+    }, 1000);
+  };
 
   return (
     <div className="p-4">
@@ -61,5 +61,5 @@ export default function MathsPage() {
         <div className="mt-4 text-lg">{result}</div>
       </div>
     </div>
-  )
+  );
 }
