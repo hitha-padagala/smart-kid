@@ -27,18 +27,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <div
-          className="min-h-screen bg-cover bg-center flex flex-col"
-          style={{ backgroundImage: "url('/homebg.png')" }}
-        >
-          <div className="w-full max-w-4xl mx-auto p-6">
-            <div className="card-like bg-white/85 dark:bg-black/60 backdrop-blur-sm">
-              {children}
-            </div>
-          </div>
-        </div>
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

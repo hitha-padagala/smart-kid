@@ -442,7 +442,7 @@
     "titleBar.activeBackground": "#282b3c",
     "titleBar.activeForeground": "#eeefff"
   },
-  "workbench.colorTheme": "VS Code Dark",
+  "workbench.colorTheme": "Dark 2026",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": false,
   "workbench.editor.restoreViewState": false,
