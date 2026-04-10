@@ -3,6 +3,14 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const getTeluguVoice = (voices: SpeechSynthesisVoice[]) => {
+  return (
+    voices.find((v) => v.lang.toLowerCase().startsWith("te")) ||
+    voices.find((v) => v.lang.toLowerCase().includes("in")) ||
+    null
+  );
+};
+
 type Section = "vegetables" | "fruits" | "reading";
 
 interface VegetableItem {
@@ -470,17 +478,26 @@ export default function TeluguPage() {
     const u = new SpeechSynthesisUtterance(text);
     u.lang = "te-IN";
     u.rate = 0.8;
+
+    // Ensure voices are loaded before trying to speak (important in Chrome/Edge)
+    if (!voicesLoaded) {
+      window.speechSynthesis.getVoices();
+    }
+
     // Try to find a Telugu voice first
     const voices = window.speechSynthesis.getVoices();
-    const teluguVoice = voices.find((v) => v.lang.startsWith("te"));
+    const teluguVoice = getTeluguVoice(voices);
     if (teluguVoice) {
       u.voice = teluguVoice;
-    } else {
-      // If no Telugu voice found, don't force any voice - let the browser
-      // handle the te-IN language tag with its default behavior
-      // This often produces better results than forcing an English voice
-      u.voice = null;
     }
+
+    u.onerror = () => {
+      const fallback = new SpeechSynthesisUtterance(text);
+      fallback.lang = "en-IN";
+      fallback.rate = 0.8;
+      window.speechSynthesis.speak(fallback);
+    };
+
     window.speechSynthesis.speak(u);
   };
 

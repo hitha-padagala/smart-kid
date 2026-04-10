@@ -60,22 +60,21 @@ export default function Home() {
 
         {/* Subject cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl px-4">
-          {/* Telugu Card */}
+          {/* English Card */}
           <a
-            href="/telugu"
+            href="/english"
             className="group relative transform transition-all duration-300 hover:-translate-y-3 hover:scale-105"
           >
-            <div className="bg-linear-to-br from-pink-300 via-pink-400 to-rose-500 rounded-3xl p-8 text-center shadow-xl border-4 border-white/50 cursor-pointer overflow-hidden">
-              {/* Sparkle effect on hover */}
+            <div className="bg-linear-to-br from-green-300 via-green-400 to-emerald-500 rounded-3xl p-8 text-center shadow-xl border-4 border-white/50 cursor-pointer overflow-hidden">
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="text-7xl mb-4 group-hover:animate-bounce">
-                  📖
+                  🔤
                 </div>
                 <h2 className="text-3xl font-bold text-white drop-shadow-md">
-                  Telugu
+                  English
                 </h2>
-                <p className="text-white/90 text-lg mt-2">తెలుగు</p>
+                <p className="text-white/90 text-lg mt-2">ABC & Beyond!</p>
                 <div className="flex justify-center gap-1 mt-4">
                   {[...Array(3)].map((_, i) => (
                     <span key={i} className="text-yellow-200 text-xl">
@@ -113,21 +112,22 @@ export default function Home() {
             </div>
           </a>
 
-          {/* English Card */}
+          {/* Telugu Card */}
           <a
-            href="/english"
+            href="/telugu"
             className="group relative transform transition-all duration-300 hover:-translate-y-3 hover:scale-105"
           >
-            <div className="bg-linear-to-br from-green-300 via-green-400 to-emerald-500 rounded-3xl p-8 text-center shadow-xl border-4 border-white/50 cursor-pointer overflow-hidden">
+            <div className="bg-linear-to-br from-pink-300 via-pink-400 to-rose-500 rounded-3xl p-8 text-center shadow-xl border-4 border-white/50 cursor-pointer overflow-hidden">
+              {/* Sparkle effect on hover */}
               <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="text-7xl mb-4 group-hover:animate-bounce">
-                  🔤
+                  📖
                 </div>
                 <h2 className="text-3xl font-bold text-white drop-shadow-md">
-                  English
+                  Telugu
                 </h2>
-                <p className="text-white/90 text-lg mt-2">ABC & Beyond!</p>
+                <p className="text-white/90 text-lg mt-2">తెలుగు</p>
                 <div className="flex justify-center gap-1 mt-4">
                   {[...Array(3)].map((_, i) => (
                     <span key={i} className="text-yellow-200 text-xl">
