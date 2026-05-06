@@ -1,0 +1,122 @@
+{
+  "cbseEnglishTopics": [
+    {
+      "id": "good-morning",
+      "title": "Good Morning!",
+      "description": "Greetings and introduction",
+      "emoji": "🌅"
+    },
+    {
+      "id": "actions-we-do",
+      "title": "Actions We Do",
+      "description": "Action words and verbs",
+      "emoji": "🏃"
+    },
+    {
+      "id": "at-home",
+      "title": "At Home",
+      "description": "Rooms and things at home",
+      "emoji": "🏠"
+    },
+    {
+      "id": "the-eat-together",
+      "title": "The Eat Together",
+      "description": "Food and meals vocabulary",
+      "emoji": "🍽️"
+    },
+    {
+      "id": "the-work-people-do",
+      "title": "The Work People Do",
+      "description": "Occupations and community helpers",
+      "emoji": "👷"
+    },
+    {
+      "id": "water-is-life",
+      "title": "Water is Life",
+      "description": "Water importance and conservation",
+      "emoji": "💧"
+    },
+    {
+      "id": "dressing-up",
+      "title": "Dressing Up",
+      "description": "Clothes and dressing",
+      "emoji": "👕"
+    },
+    {
+      "id": "the-traffic-horn",
+      "title": "The Traffic Scene",
+      "description": "Traffic rules and safety",
+      "emoji": "🚦"
+    }
+  ],
+  "vocabularyWords": [
+    { "word": "beautiful", "meaning": "pleasing to see", "emoji": "😊" },
+    { "word": "carefully", "meaning": "with care", "emoji": "✨" },
+    { "word": "discover", "meaning": "find something new", "emoji": "🔍" },
+    { "word": "exactly", "meaning": "precisely", "emoji": "🎯" },
+    { "word": "gentle", "meaning": "kind and soft", "emoji": "🕊️" },
+    { "word": "honest", "meaning": "truthful", "emoji": "✅" },
+    { "word": "immediately", "meaning": "right away", "emoji": "⚡" },
+    { "word": "journey", "meaning": "travel from one place", "emoji": "🚗" },
+    {
+      "word": "knowledge",
+      "meaning": "information and understanding",
+      "emoji": "📚"
+    },
+    { "word": "listen", "meaning": "hear with attention", "emoji": "👂" },
+    { "word": "magnificent", "meaning": "grand and beautiful", "emoji": "🏰" },
+    { "word": "nervous", "meaning": "worried or anxious", "emoji": "😰" },
+    { "word": "opposite", "meaning": "completely different", "emoji": "↔️" },
+    { "word": "patient", "meaning": "able to wait calmly", "emoji": "😌" }
+  ],
+  "readingComprehension": [
+    {
+      "title": "The Ant and the Cricket",
+      "story": "Once upon a time, there was an ant who worked hard every day collecting food for winter. A cricket nearby sang all day but never stored any food. When winter came, the ant had plenty of food but the cricket was hungry. The ant shared his food with the cricket. The cricket learned that hard work is important.",
+      "questions": [
+        {
+          "q": "What did the ant do every day?",
+          "options": ["Slept all day", "Collected food", "Played games"],
+          "answer": "Collected food"
+        },
+        {
+          "q": "What did the cricket do all day?",
+          "options": ["Worked hard", "Sang songs", "Stored food"],
+          "answer": "Sang songs"
+        },
+        {
+          "q": "What lesson did the cricket learn?",
+          "options": [
+            "Laziness is good",
+            "Hard work is important",
+            "Food is not needed"
+          ],
+          "answer": "Hard work is important"
+        }
+      ],
+      "emoji": "🐜"
+    },
+    {
+      "title": "The Kind Baker",
+      "story": "In a village lived a kind baker named Ramesh. Every morning he would bake delicious bread and cakes. One cold winter day, a hungry traveler came to his shop. Ramesh gave him warm bread and tea without asking for money. The traveler thanked him and left. Soon, people from all around came to buy from the kind baker.",
+      "questions": [
+        {
+          "q": "What was the baker's name?",
+          "options": ["Suresh", "Ramesh", "Dinesh"],
+          "answer": "Ramesh"
+        },
+        {
+          "q": "What did Ramesh give the traveler?",
+          "options": ["Money", "Bread and tea", "Clothes"],
+          "answer": "Bread and tea"
+        },
+        {
+          "q": "Why did people like the baker?",
+          "options": ["He was rich", "He was kind", "He was funny"],
+          "answer": "He was kind"
+        }
+      ],
+      "emoji": "🍞"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "cbseTeluguTopics": [
+    {
+      "id": "varnamala",
+      "title": "వర్ణమాల (Alphabet)",
+      "description": "Telugu vowels and consonants",
+      "emoji": "🔤"
+    },
+    {
+      "id": "padulu",
+      "title": "పదులు (Words)",
+      "description": "Common Telugu words",
+      "emoji": "🔤"
+    },
+    {
+      "id": "galugu",
+      "title": "గలిగలు (Rhyming Words)",
+      "description": "Rhyming words and sound patterns",
+      "emoji": "🎵"
+    },
+    {
+      "id": "sabdaalu",
+      "title": "సబ్దాలు (Sounds)",
+      "description": "Identifying beginning sounds",
+      "emoji": "👂"
+    },
+    {
+      "id": "vakyalu",
+      "title": "వాక్యాలు (Sentences)",
+      "description": "Forming simple sentences",
+      "emoji": "💬"
+    },
+    {
+      "id": "kathalu",
+      "title": "కథలు (Stories)",
+      "description": "Short stories and comprehension",
+      "emoji": "📚"
+    },
+    {
+      "id": "kavyam",
+      "title": "కవ్యం (Poetry)",
+      "description": "Children's poems",
+      "emoji": "🎤"
+    }
+  ],
+  "vowels": [
+    { "telugu": "అ", "phonetic": "a", "example": "అమ్మ - Amma (Mother)" },
+    { "telugu": "ఆ", "phonetic": "aa", "example": "ఆమ - Aama (Mango)" },
+    {
+      "telugu": "ఇ",
+      "phonetic": "i",
+      "example": "ఇలవ చక్కని - Ilava chakkani"
+    },
+    { "telugu": "ఈ", "phonetic": "ee", "example": "ఈని - Eeni" },
+    { "telugu": "ఉ", "phonetic": "u", "example": "ఉప్పు - Uppu (Salt)" },
+    { "telugu": "ఊ", "phonetic": "oo", "example": "ఊపిరి - Oopiri (Breath)" },
+    { "telugu": "ఎ", "phonetic": "e", "example": "ఎనిమిది - Enimidi (Nine)" },
+    { "telugu": "ఏ", "phonetic": "ae", "example": "ఏకము - Ekamu (One)" },
+    { "telugu": "ఐ", "phonetic": "ai", "example": "ఐదు - Aidu (Five)" },
+    { "telugu": "ఒ", "phonetic": "o", "example": "ఒకటి - Okati (One)" },
+    { "telugu": "ఓ", "phonetic": "oo", "example": "ఓడ - ODa (Boat)" },
+    { "telugu": "ఔ", "phonetic": "au", "example": "ఔషధి - Aushadhi (Medicine)" }
+  ],
+  "consonants": [
+    { "telugu": "క", "phonetic": "ka", "example": "కల్లు - Kallu (Eyes)" },
+    { "telugu": "ఖ", "phonetic": "kha", "example": "ఖరీదు - Khareedu" },
+    { "telugu": "గ", "phonetic": "ga", "example": "గడి - Gadi (Clock)" },
+    {
+      "telugu": "ఘ",
+      "phonetic": "gha",
+      "example": "ఘడియాళం - Ghadiyaalam (Watch)"
+    },
+    { "telugu": "ఙ", "phonetic": "nga", "example": "అಙ್కన - Angkana" },
+    { "telugu": "చ", "phonetic": "cha", "example": "చెయ్యి - Cheyyi (Hand)" },
+    { "telugu": "ಛ", "phonetic": "chha", "example": "ಛాయ - Chhaya" },
+    { "telugu": "జ", "phonetic": "ja", "example": "జలము - Jalamu (Water)" },
+    { "telugu": "ಝ", "phonetic": "jha", "example": "ಝరణ - JharaNa" },
+    { "telugu": "ಞ", "phonetic": "nya", "example": "ಞాన - Nyaana" },
+    { "telugu": "ట", "phonetic": "ta", "example": "టవలవ - Tavalava" },
+    { "telugu": "ಠ", "phonetic": "tha", "example": "ಠీಕೆ - Thike" },
+    { "telugu": "ಡ", "phonetic": "da", "example": "ಡಮರಿ - Dhamari" },
+    { "telugu": "ಢ", "phonetic": "dha", "example": "ಢಿಕ್ಕೆ - Dhikke" },
+    { "telugu": "ಣ", "phonetic": "na", "example": "ಣಮుಲ - Namula" },
+    { "telugu": "ತ", "phonetic": "tha", "example": "ತಲೆ - Thale (Head)" },
+    { "telugu": "ಥ", "phonetic": "thha", "example": "ಥಳಿಕೆ - Thalike" },
+    { "telugu": "ದ", "phonetic": "da", "example": "ದಿನం - Dinam (Day)" },
+    { "telugu": "ಧ", "phonetic": "dha", "example": "ಧైರ్య - Dhairya" },
+    { "telugu": "ನ", "phonetic": "na", "example": "ನಮಸ್ಕಾರ - Namaskara" },
+    { "telugu": "ಪ", "phonetic": "pa", "example": "ಪಾಲಿಗೆ - Paalige (Box)" },
+    { "telugu": "ಫ", "phonetic": "pha", "example": "ಫುಲ - Phula (Flower)" },
+    { "telugu": "ಬ", "phonetic": "ba", "example": "ಬಾಲ్ - Ball" },
+    { "telugu": "ಭ", "phonetic": "bha", "example": "ಭాష - Bhaasha (Language)" },
+    { "telugu": "ಮ", "phonetic": "ma", "example": "ಮನೆ - Mane (House)" },
+    { "telugu": "ಯ", "phonetic": "ya", "example": "ಯಾತ್ರೆ - Yaatre" },
+    { "telugu": "ರ", "phonetic": "ra", "example": "ರವಿ - Ravi" },
+    { "telugu": "ಲ", "phonetic": "la", "example": "ಲಿಂಗ - Linga" },
+    { "telugu": "ವ", "phonetic": "va", "example": "ವಾನರ - Vaanara" },
+    { "telugu": "ಶ", "phonetic": "sha", "example": "ಶಾಲೆ - Shaale" },
+    { "telugu": "ಷ", "phonetic": "shha", "example": "ಷಟ್ಕಮಿ - Shhatakami" },
+    { "telugu": "ಸ", "phonetic": "sa", "example": "ಸಮುದ್ರ - Samudra" },
+    { "telugu": "ಹ", "phonetic": "ha", "example": "ಹರಿ - Hari" },
+    { "telugu": "ಳ", "phonetic": "la", "example": "ಳಿಂಗ - Linga" },
+    { "telugu": "ಕ್ಷ", "phonetic": "ksha", "example": "ಕ್ಷేత్ర - Kshetra" }
+  ],
+  "numbers": [
+    { "telugu": "సున్న", "english": "Zero", "number": 0 },
+    { "telugu": "ఒకటి", "english": "One", "number": 1 },
+    { "telugu": "రెండు", "english": "Two", "number": 2 },
+    { "telugu": "మూడు", "english": "Three", "number": 3 },
+    { "telugu": "నాలుగు", "english": "Four", "number": 4 },
+    { "telugu": "ఐదు", "english": "Five", "number": 5 },
+    { "telugu": "ఆరు", "english": "Six", "number": 6 },
+    { "telugu": "ఎనిమిది", "english": "Seven", "number": 7 },
+    { "telugu": "ఎనిమిది", "english": "Eight", "number": 8 },
+    { "telugu": "తొమ్మిది", "english": "Nine", "number": 9 },
+    { "telugu": "పది", "english": "Ten", "number": 10 },
+    { "telugu": "పదహారు", "english": "Twenty", "number": 20 },
+    { "telugu": "ముప్పు", "english": "Thirty", "number": 30 },
+    { "telugu": "నలుగు", "english": "Forty", "number": 40 },
+    { "telugu": "ఐదశి", "english": "Fifty", "number": 50 },
+    { "telugu": "అరవైసెట్టు", "english": "Sixty", "number": 60 },
+    { "telugu": "ఎర�palవైసెట్టు", "english": "Seventy", "number": 70 },
+    { "telugu": "ఎనిమిదవైసెట్టు", "english": "Eighty", "number": 80 },
+    { "telugu": "తొమ్మిదవైసెట్టు", "english": "Ninety", "number": 90 },
+    { "telugu": "నూరు", "english": "Hundred", "number": 100 }
+  ],
+  "daysOfWeek": [
+    { "telugu": "ఆదివారం", "english": "Sunday", "short": "ఆది" },
+    { "telugu": "సోమవారం", "english": "Monday", "short": "సోమ" },
+    { "telugu": "మంగళవారం", "english": "Tuesday", "short": "మంగళ" },
+    { "telugu": "బుధవారం", "english": "Wednesday", "short": "బుధ" },
+    { "telugu": "గురువారం", "english": "Thursday", "short": "గురు" },
+    { "telugu": "శుక్రవారం", "english": "Friday", "short": "శుక్ర" },
+    { "telugu": "శనివారం", "english": "Saturday", "short": "శని" }
+  ],
+  "months": [
+    { "telugu": "జనవరి", "english": "January" },
+    { "telugu": "ఫిబ్రవరి", "english": "February" },
+    { "telugu": "మార్చి", "english": "March" },
+    { "telugu": "ఏప్రిల్", "english": "April" },
+    { "telugu": "మే", "english": "May" },
+    { "telugu": "జూన్", "english": "June" },
+    { "telugu": "జూలై", "english": "July" },
+    { "telugu": "ఆగస్టు", "english": "August" },
+    { "telugu": "సెప్టెంబర్", "english": "September" },
+    { "telugu": "అక్టోబర్", "english": "October" },
+    { "telugu": "నవంబర్", "english": "November" },
+    { "telugu": "డిసెంబర్", "english": "December" }
+  ],
+  "colors": [
+    { "telugu": "ఎరుపు", "english": "Red", "emoji": "🔴" },
+    { "telugu": "నీలం", "english": "Blue", "emoji": "🔵" },
+    { "telugu": "పచ్చ", "english": "Green", "emoji": "🟢" },
+    { "telugu": "పసుపు", "english": "Yellow", "emoji": "🟡" },
+    { "telugu": "తెలుపు", "english": "White", "emoji": "⚪" },
+    { "telugu": "నలుపు", "english": "Black", "emoji": "⚫" },
+    { "telugu": "ఊదా", "english": "Purple", "emoji": "🟣" },
+    { "telugu": "గులాబీ", "english": "Pink", "emoji": "🌸" }
+  ],
+  "familyMembers": [
+    { "telugu": "నాన్న", "english": "Father", "emoji": "👨" },
+    { "telugu": "అమ్మ", "english": "Mother", "emoji": "👩" },
+    { "telugu": "అన్నయ్య", "english": "Elder Brother", "emoji": "👦" },
+    { "telugu": "అక్క", "english": "Elder Sister", "emoji": "👧" },
+    { "telugu": "తమ్ముడు", "english": "Younger Brother", "emoji": "👦" },
+    { "telugu": "చెల్లి", "english": "Younger Sister", "emoji": "👧" },
+    { "telugu": "తాత", "english": "Grandfather", "emoji": "👴" },
+    { "telugu": "అమ్మమ్మ", "english": "Grandmother", "emoji": "👵" }
+  ],
+  "commonWords": [
+    { "telugu": "నమస్కారం", "english": "Hello", "phonetic": "Namaskaaram" },
+    {
+      "telugu": "ధన్యవాదాలు",
+      "english": "Thank you",
+      "phonetic": "Dhanyavaadaalu"
+    },
+    {
+      "telugu": "బాగున్నాను",
+      "english": "I am fine",
+      "phonetic": "Baagunnaanu"
+    },
+    {
+      "telugu": "మీ పేరు ఏమిటి?",
+      "english": "What is your name?",
+      "phonetic": "Mee peru emiti?"
+    },
+    { "telugu": "నా పేరు", "english": "My name is", "phonetic": "Naa peru" },
+    { "telugu": "దయచేసి", "english": "Please", "phonetic": "Dayachesi" },
+    { "telugu": "క్షమించండి", "english": "Sorry", "phonetic": "Kshaminchandi" },
+    { "telugu": "అవును", "english": "Yes", "phonetic": "Avunu" },
+    { "telugu": "కాదు", "english": "No", "phonetic": "Kadu" },
+    {
+      "telugu": "నేను అర్థం చేసుకున్నాను",
+      "english": "I understood",
+      "phonetic": "Nenu arthaam chesukunnaaanu"
+    }
+  ],
+  "shortStories": [
+    {
+      "title": "కల్లోలభట్టి కథ",
+      "telugu": "ఒక కళ్లోలభట్టి అనే పెంపుడు ఉండటం చేత అన్ని కళ్లయస్త్రములు అతనిని గమనించాయి. కళ్లోలభట్టి తన కళ్లలో ఏడు రంగుల దీపాలను ధరించి ప్రకాశిస్తాడు. అతడు మంచి హృదయవంతుడు.",
+      "english": "A wrestler named Kallokabatti was known for his strength. He wore seven colored lamps in his eyes that glowed. He was a kind-hearted man.",
+      "moral": "Strength without kindness is not complete",
+      "emoji": "💪"
+    },
+    {
+      "title": "బల్లరామలి కథ",
+      "telugu": "బల్లరామలి అనే ఒక రావేసు ఉండడం చేత అతని పని చాలా బలంగా ఉండేది. అతను చాలా కష్టపడి తన పనిని చేసేవాడు. అతడి కష్టపడటం చూసి లక్ష్మణకు అతని గురి చేయబడింది.",
+      "english": "Balleryamali, a cobbler, was known for his hard work. He worked very diligently. Seeing his dedication, he was chosen by Lakshmana.",
+      "moral": "Hard work always pays off",
+      "emoji": "👞"
+    }
+  ],
+  "poems": [
+    {
+      "title": "అమ్మ పలికలు",
+      "telugu": "అమ్మ అమ్మ అమ్మ అని పిలిచిన పలికేను\nఅందరికి అమ్మే ప్రాణం అని తెలిసేను\nఅమ్మ ఒడిలో అమృతం దొరుకును\nఅమ్మ ప్రేమలో ఆనందం దొరుకును",
+      "english": "When I call Amma, she responds\nI learned that mother is life itself\nIn mother's lap, we find nectar\nIn mother's love, we find happiness",
+      "emoji": "🎵"
+    },
+    {
+      "title": "తెలుగు తల్లితో మాట్లాడుతాను",
+      "telugu": "తెలుగు తల్లి తెలుగు తల్లి\nనీకు తెలుగు తల్లి\nనేను తెలుగు తల్లి\nనీకు తెలుగు తల్లి",
+      "english": "Telugu mother, Telugu mother\nYou have Telugu mother\nI have Telugu mother\nYou have Telugu mother",
+      "emoji": "💃"
+    }
+  ]
+}

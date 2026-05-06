@@ -1,0 +1,348 @@
+{
+  "textbook": "Santoor (NCERT CBSE 3rd Grade English)",
+  "chapters": [
+    {
+      "id": "good-morning",
+      "title": "Good Morning!",
+      "description": "Greetings and introductions",
+      "emoji": "🌅",
+      "questions": [
+        {
+          "q": "How do you say 'Hello' in the morning?",
+          "options": ["Good Morning", "Good Night", "Good Bye"],
+          "answer": "Good Morning"
+        },
+        {
+          "q": "What do you say when meeting someone?",
+          "options": ["Hello", "Goodbye", "Please"],
+          "answer": "Hello"
+        },
+        {
+          "q": "What is the opposite of 'Hello'?",
+          "options": ["Goodbye", "Hi", "Hey"],
+          "answer": "Goodbye"
+        },
+        {
+          "q": "How do you respond to 'How are you?'",
+          "options": ["I am fine", "I am happy", "I am good"],
+          "answer": "I am fine"
+        }
+      ],
+      "fillInTheBlanks": [
+        {
+          "q": "We say 'Good Morning' when we ____ meet someone.",
+          "answer": "first"
+        },
+        { "q": "A smile shows you are ____.", "answer": "friendly" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Tom says 'Good Morning' to 5 friends. How many times?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "actions-we-do",
+      "title": "Actions We Do",
+      "description": "Action words (verbs)",
+      "emoji": "🏃",
+      "questions": [
+        {
+          "q": "What do you do with your legs when running?",
+          "options": ["Move", "Sit", "Stand"],
+          "answer": "Move"
+        },
+        {
+          "q": "Which word shows action? 'Sit' or 'Chair'?",
+          "options": ["Sit", "Chair", "Both"],
+          "answer": "Sit"
+        },
+        {
+          "q": "How do birds move?",
+          "options": ["Fly", "Run", "Walk"],
+          "answer": "Fly"
+        },
+        {
+          "q": "What do fish do in water?",
+          "options": ["Swim", "Walk", "Run"],
+          "answer": "Swim"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "Children ____ in the park.", "answer": "play" },
+        { "q": "Birds ____ in the sky.", "answer": "fly" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Cat can 'jump'. Dog can 'run'. Which moves faster?",
+          "options": ["Dog", "Cat", "Both"],
+          "answer": "Dog"
+        }
+      ]
+    },
+    {
+      "id": "at-home",
+      "title": "At Home",
+      "description": "Rooms and things at home",
+      "emoji": "🏠",
+      "questions": [
+        {
+          "q": "Where do you sleep?",
+          "options": ["Bedroom", "Kitchen", "Bathroom"],
+          "answer": "Bedroom"
+        },
+        {
+          "q": "Where do you cook food?",
+          "options": ["Kitchen", "Bedroom", "Garden"],
+          "answer": "Kitchen"
+        },
+        {
+          "q": "What is used to cut vegetables?",
+          "options": ["Knife", "Spoon", "Plate"],
+          "answer": "Knife"
+        },
+        {
+          "q": "Where do you keep clothes?",
+          "options": ["Wardrobe", "Fridge", "Oven"],
+          "answer": "Wardrobe"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "We keep food in the ____.", "answer": "fridge" },
+        { "q": "We wash clothes in the ____.", "answer": "washing machine" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Mummy cooks in the kitchen. Daddy watches TV in the living room. How many rooms?",
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "id": "the-eat-together",
+      "title": "The Eat Together",
+      "description": "Food and meals vocabulary",
+      "emoji": "🍽️",
+      "questions": [
+        {
+          "q": "What do you drink in the morning?",
+          "options": ["Milk", "Juice", "Water"],
+          "answer": "Milk"
+        },
+        {
+          "q": "Which is eaten for breakfast?",
+          "options": ["Paratha", "Rice", "Roti"],
+          "answer": "Paratha"
+        },
+        {
+          "q": "What is sweet and yellow?",
+          "options": ["Mango", "Apple", "Banana"],
+          "answer": "Mango"
+        },
+        {
+          "q": "What do you use to eat soup?",
+          "options": ["Spoon", "Fork", "Knife"],
+          "answer": "Spoon"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "We eat ____ for breakfast.", "answer": "cereal" },
+        { "q": "____ is rich in iron.", "answer": "Spinach" }
+      ],
+      "wordProblems": [
+        { "q": "You eat 2 idlis and 1 banana. Total items?", "answer": "3" }
+      ]
+    },
+    {
+      "id": "the-work-people-do",
+      "title": "The Work People Do",
+      "description": "Occupations and community helpers",
+      "emoji": "👷",
+      "questions": [
+        {
+          "q": "Who teaches us?",
+          "options": ["Teacher", "Doctor", "Engineer"],
+          "answer": "Teacher"
+        },
+        {
+          "q": "Who treats sick people?",
+          "options": ["Doctor", "Teacher", "Shopkeeper"],
+          "answer": "Doctor"
+        },
+        {
+          "q": "Who drives a bus?",
+          "options": ["Driver", "Pilot", "Conductor"],
+          "answer": "Driver"
+        },
+        {
+          "q": "Who puts out fire?",
+          "options": ["Firefighter", "Policeman", "Chef"],
+          "answer": "Firefighter"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "A ____ helps us learn.", "answer": "teacher" },
+        { "q": "We buy things from a ____.", "answer": "shopkeeper" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Doctor, teacher, and engineer help society. How many helpers?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "water-is-life",
+      "title": "Water is Life",
+      "description": "Water importance and conservation",
+      "emoji": "💧",
+      "questions": [
+        {
+          "q": "How much water should we use?",
+          "options": ["Less", "More", "None"],
+          "answer": "Less"
+        },
+        {
+          "q": "Turn off tap while ____.",
+          "options": ["Brushing", "Bathing", "Both"],
+          "answer": "Brushing"
+        },
+        {
+          "q": "Water is needed for ____.",
+          "options": ["All", "Drinking", "Plants"],
+          "answer": "All"
+        },
+        {
+          "q": "We should not waste ____.",
+          "options": ["Water", "Food", "Both"],
+          "answer": "Both"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "We need water to ____.", "answer": "live" },
+        { "q": "Save water, save ____.", "answer": "earth" }
+      ],
+      "wordProblems": [
+        {
+          "q": "If you save 1 liter daily, how much in a week?",
+          "answer": "7 liters"
+        }
+      ]
+    },
+    {
+      "id": "dressing-up",
+      "title": "Dressing Up",
+      "description": "Clothes and dressing",
+      "emoji": "👕",
+      "questions": [
+        {
+          "q": "What do you wear on your feet?",
+          "options": ["Shoes", "Hat", "Gloves"],
+          "answer": "Shoes"
+        },
+        {
+          "q": "What do you wear on your head in sun?",
+          "options": ["Cap", "Socks", "Belt"],
+          "answer": "Cap"
+        },
+        {
+          "q": "Which is worn in winter?",
+          "options": ["Sweater", "T-shirt", "Shorts"],
+          "answer": "Sweater"
+        },
+        {
+          "q": "What do girls wear on special days?",
+          "options": ["Frock", "Pants", "Shirt"],
+          "answer": "Frock"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "We wear ____ in rain.", "answer": "raincoat" },
+        { "q": "We wear ____ at night.", "answer": "pajamas" }
+      ],
+      "wordProblems": [
+        {
+          "q": "You have 2 shirts, 1 pant, and 1 frock. Total clothes?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "the-traffic-horn",
+      "title": "The Traffic Scene",
+      "description": "Traffic rules and safety",
+      "emoji": "🚦",
+      "questions": [
+        {
+          "q": "What does red light mean?",
+          "options": ["Stop", "Go", "Wait"],
+          "answer": "Stop"
+        },
+        {
+          "q": "What does green light mean?",
+          "options": ["Go", "Stop", "Slow"],
+          "answer": "Go"
+        },
+        {
+          "q": "Where should you cross the road?",
+          "options": ["Zebra crossing", "Middle", "Anywhere"],
+          "answer": "Zebra crossing"
+        },
+        {
+          "q": "What should you do near a bus?",
+          "options": ["Wait", "Run", "Jump"],
+          "answer": "Wait"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "Always use zebra crossing to ____.", "answer": "cross" },
+        { "q": "Follow traffic rules for your ____.", "answer": "safety" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Red light, yellow light, green light. How many colors?",
+          "answer": "3"
+        }
+      ]
+    }
+  ],
+  "grammar": {
+    "nouns": [
+      {
+        "q": "What do you call a person, place, or thing?",
+        "options": ["Noun", "Verb", "Adjective"],
+        "answer": "Noun"
+      },
+      {
+        "q": "Teacher, boy, girl are ____.",
+        "options": ["Nouns", "Verbs", "Pronouns"],
+        "answer": "Nouns"
+      }
+    ],
+    "verbs": [
+      {
+        "q": "What shows action?",
+        "options": ["Verb", "Noun", "Adjective"],
+        "answer": "Verb"
+      },
+      {
+        "q": "Run, jump, play are ____.",
+        "options": ["Verbs", "Nouns", "Both"],
+        "answer": "Verbs"
+      }
+    ],
+    "adjectives": [
+      {
+        "q": "What describes a noun?",
+        "options": ["Adjective", "Verb", "Pronoun"],
+        "answer": "Adjective"
+      },
+      {
+        "q": "Big, small, red are ____.",
+        "options": ["Adjectives", "Adverbs", "Nouns"],
+        "answer": "Adjectives"
+      }
+    ]
+  }
+}

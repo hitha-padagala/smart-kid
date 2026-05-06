@@ -1,0 +1,158 @@
+{
+  "cbseMathTopics": [
+    {
+      "id": "where-to-look-from",
+      "title": "Where to Look From",
+      "description": "Understanding views and perspectives",
+      "emoji": "👀",
+      "chapters": ["Views of 3D shapes", "Mirror images", "Creating shapes"]
+    },
+    {
+      "id": "fun-with-numbers",
+      "title": "Fun with Numbers",
+      "description": "Numbers up to 1000, place value",
+      "emoji": "🔢",
+      "chapters": [
+        "3-digit numbers",
+        "Place value",
+        "Comparing numbers",
+        "Even and odd"
+      ]
+    },
+    {
+      "id": "give-and-take",
+      "title": "Give and Take (Addition)",
+      "description": "Addition with and without regrouping",
+      "emoji": "➕",
+      "chapters": [
+        "Addition without carry",
+        "Addition with carry",
+        "Word problems"
+      ]
+    },
+    {
+      "id": "long-and-short",
+      "title": "Long and Short",
+      "description": "Measurement of length",
+      "emoji": "📏",
+      "chapters": [
+        "Centimeters and meters",
+        "Comparing lengths",
+        "Word problems"
+      ]
+    },
+    {
+      "id": "shapes-and-designs",
+      "title": "Shapes and Designs",
+      "description": "2D shapes and patterns",
+      "emoji": "🔷",
+      "chapters": ["Corners and sides", "Making shapes", "Tangram puzzles"]
+    },
+    {
+      "id": "fun-with-give-and-take",
+      "title": "Fun with Give and Take (Subtraction)",
+      "description": "Subtraction with and without borrowing",
+      "emoji": "➖",
+      "chapters": [
+        "Subtraction without borrowing",
+        "Subtraction with borrowing",
+        "Word problems"
+      ]
+    },
+    {
+      "id": "time-goes-on",
+      "title": "Time Goes On",
+      "description": "Reading time and calendars",
+      "emoji": "⏰",
+      "chapters": ["Reading clock", "Calendar reading", "Days and months"]
+    },
+    {
+      "id": "who-is-heavier",
+      "title": "Who is Heavier?",
+      "description": "Weight measurement",
+      "emoji": "⚖️",
+      "chapters": ["Weight units", "Comparing weights", "Word problems"]
+    },
+    {
+      "id": "how-many-times",
+      "title": "How Many Times?",
+      "description": "Multiplication tables and division",
+      "emoji": "✖️",
+      "chapters": [
+        "Multiplication tables 2-10",
+        "Multiplication facts",
+        "Introduction to division"
+      ]
+    },
+    {
+      "id": "play-with-patterns",
+      "title": "Play with Patterns",
+      "description": "Number and shape patterns",
+      "emoji": "🔁",
+      "chapters": ["Number patterns", "Shape patterns", "Repeating patterns"]
+    },
+    {
+      "id": "jugs-and-mugs",
+      "title": "Jugs and Mugs",
+      "description": "Volume and capacity measurement",
+      "emoji": "🫙",
+      "chapters": [
+        "Liters and milliliters",
+        "Measuring liquids",
+        "Word problems"
+      ]
+    },
+    {
+      "id": "can-we-share",
+      "title": "Can We Share?",
+      "description": "Division and sharing equally",
+      "emoji": "➗",
+      "chapters": ["Sharing equally", "Division as sharing", "Word problems"]
+    },
+    {
+      "id": "smart-charts",
+      "title": "Smart Charts",
+      "description": "Data handling and graphs",
+      "emoji": "📊",
+      "chapters": ["Reading charts", "Making bar graphs", "Pictographs"]
+    },
+    {
+      "id": "rupees-and-paise",
+      "title": "Rupees and Paise",
+      "description": "Money and transactions",
+      "emoji": "💰",
+      "chapters": [
+        "Recognizing coins and notes",
+        "Adding money",
+        "Word problems"
+      ]
+    }
+  ],
+  "wordProblems": [
+    {
+      "question": "Riya has 245 marbles. Her friend gave her 138 more. How many marbles does Riya have now?",
+      "answer": 383,
+      "emoji": "🔢"
+    },
+    {
+      "question": "There are 456 students in the school. 234 students went on a picnic. How many students are left?",
+      "answer": 222,
+      "emoji": "🏫"
+    },
+    {
+      "question": "A shopkeeper had 500 rupees. He sold toys for 275 rupees. How much money does he have now?",
+      "answer": 225,
+      "emoji": "💵"
+    },
+    {
+      "question": "There are 150 books on a shelf. 45 more books were added. How many books are there now?",
+      "answer": 195,
+      "emoji": "📚"
+    },
+    {
+      "question": "Tom had 320 stickers. He gave 145 to his sister. How many stickers does Tom have left?",
+      "answer": 175,
+      "emoji": "⭐"
+    }
+  ]
+}

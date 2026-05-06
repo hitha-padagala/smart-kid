@@ -4,8 +4,17 @@ import Link from "next/link";
 import vegetablesData from "@/data/telugu-vegetables.json";
 import fruitsData from "@/data/telugu-fruits.json";
 import readingLessonsData from "@/data/telugu-reading.json";
+import cbseTeluguData from "@/data/cbse-telugu-3rd.json";
 
-type Section = "vegetables" | "fruits" | "reading";
+type Section =
+  | "vegetables"
+  | "fruits"
+  | "reading"
+  | "cbse-topics"
+  | "vowels"
+  | "consonants"
+  | "numbers"
+  | "days-months";
 
 type VegetableItem = {
   telugu: string;
@@ -74,6 +83,41 @@ const sectionConfig: Record<
     bgColor: "from-blue-50 to-indigo-50",
     borderColor: "border-blue-300",
   },
+  "cbse-topics": {
+    label: "CBSE టాపిక్స్",
+    emoji: "🎓",
+    color: "from-indigo-400 to-purple-500",
+    bgColor: "from-indigo-50 to-purple-50",
+    borderColor: "border-indigo-300",
+  },
+  vowels: {
+    label: "స్వరాలు",
+    emoji: "🔤",
+    color: "from-yellow-400 to-amber-500",
+    bgColor: "from-yellow-50 to-amber-50",
+    borderColor: "border-yellow-300",
+  },
+  consonants: {
+    label: "హల్లులు",
+    emoji: "🔡",
+    color: "from-orange-400 to-red-500",
+    bgColor: "from-orange-50 to-red-50",
+    borderColor: "border-orange-300",
+  },
+  numbers: {
+    label: "సంఖ్యలు",
+    emoji: "🔢",
+    color: "from-cyan-400 to-blue-500",
+    bgColor: "from-cyan-50 to-blue-50",
+    borderColor: "border-cyan-300",
+  },
+  "days-months": {
+    label: "రోజులు/నెలలు",
+    emoji: "📅",
+    color: "from-pink-400 to-rose-500",
+    bgColor: "from-pink-50 to-rose-50",
+    borderColor: "border-pink-300",
+  },
 };
 
 export default function TeluguPage() {
@@ -83,6 +127,13 @@ export default function TeluguPage() {
   const [readingIndex, setReadingIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
   const [voicesLoaded, setVoicesLoaded] = useState(false);
+  const [vowelIndex, setVowelIndex] = useState(0);
+  const [consonantIndex, setConsonantIndex] = useState(0);
+  const [numberIndex, setNumberIndex] = useState(0);
+  const [dayIndex, setDayIndex] = useState<number | null>(0);
+  const [monthIndex, setMonthIndex] = useState(0);
+  const [familyIndex, setFamilyIndex] = useState(0);
+  const [storyIndex, setStoryIndex] = useState(0);
 
   // Load voices when component mounts
   useEffect(() => {
@@ -650,6 +701,233 @@ export default function TeluguPage() {
                   {readingLessons.length}
                 </span>
               </div>
+            </div>
+          )}
+
+          {/* CBSE Topics Section */}
+          {activeSection === "cbse-topics" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-indigo-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-indigo-700">
+                🎓 CBSE 3rd Grade తెలుగు Topics
+              </h2>
+              <div className="grid grid-cols-2 gap-3">
+                {cbseTeluguData.cbseTeluguTopics.map((topic, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setReadingIndex(idx)}
+                    className="p-4 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl border-2 border-indigo-200 hover:from-indigo-200 hover:to-purple-200 transition transform hover:scale-105"
+                  >
+                    <div className="text-3xl mb-1">{topic.emoji}</div>
+                    <div className="font-bold text-sm">{topic.title}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Vowels Section */}
+          {activeSection === "vowels" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-yellow-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-yellow-700">
+                🔤 స్వరాలు (Vowels)
+              </h2>
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-yellow-800 mb-2">
+                  {cbseTeluguData.vowels[vowelIndex]?.telugu}
+                </h3>
+                <div className="text-2xl text-zinc-600 font-medium mb-2">
+                  🔊 {cbseTeluguData.vowels[vowelIndex]?.phonetic}
+                </div>
+                <div className="text-lg text-zinc-500 mb-4">
+                  ({cbseTeluguData.vowels[vowelIndex]?.example})
+                </div>
+                <div className="flex justify-center gap-3 mb-4">
+                  <button
+                    onClick={() =>
+                      speakTelugu(
+                        cbseTeluguData.vowels[vowelIndex]?.telugu || "",
+                      )
+                    }
+                    className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-2xl text-lg font-bold"
+                  >
+                    🔊 వినండి
+                  </button>
+                </div>
+                <div className="grid grid-cols-4 gap-2 mt-4">
+                  {cbseTeluguData.vowels.map((v, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setVowelIndex(idx)}
+                      className={`p-2 rounded-xl border-2 transition transform hover:scale-110 ${
+                        idx === vowelIndex
+                          ? "bg-yellow-400 text-white border-yellow-500"
+                          : "bg-white border-yellow-200"
+                      }`}
+                    >
+                      <div className="text-xl font-bold">{v.telugu}</div>
+                      <div className="text-xs">
+                        {v.example
+                          .split(" - ")[1]
+                          ?.split("(")[1]
+                          ?.replace(")", "") || ""}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Consonants Section */}
+          {activeSection === "consonants" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-orange-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-orange-700">
+                🔡 హల్లులు (Consonants)
+              </h2>
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-orange-800 mb-2">
+                  {cbseTeluguData.consonants[consonantIndex]?.telugu}
+                </h3>
+                <div className="text-2xl text-zinc-600 font-medium mb-2">
+                  🔊 {cbseTeluguData.consonants[consonantIndex]?.phonetic}
+                </div>
+                <div className="text-lg text-zinc-500 mb-4">
+                  ({cbseTeluguData.consonants[consonantIndex]?.example})
+                </div>
+                <div className="flex justify-center gap-3 mb-4">
+                  <button
+                    onClick={() =>
+                      speakTelugu(
+                        cbseTeluguData.consonants[consonantIndex]?.telugu || "",
+                      )
+                    }
+                    className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-2xl text-lg font-bold"
+                  >
+                    🔊 వినండి
+                  </button>
+                </div>
+                <div className="grid grid-cols-5 gap-1 mt-4 max-h-60 overflow-y-auto">
+                  {cbseTeluguData.consonants.map((c, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setConsonantIndex(idx)}
+                      className={`p-1 rounded-lg border transition transform hover:scale-110 ${
+                        idx === consonantIndex
+                          ? "bg-orange-400 text-white border-orange-500"
+                          : "bg-white border-orange-200"
+                      }`}
+                    >
+                      <div className="text-lg font-bold">{c.telugu}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Numbers Section */}
+          {activeSection === "numbers" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-cyan-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-cyan-700">
+                🔢 సంఖ్యలు (Numbers)
+              </h2>
+              <div className="text-center">
+                <h3 className="text-5xl font-bold text-cyan-800 mb-2">
+                  {cbseTeluguData.numbers[numberIndex]?.telugu}
+                </h3>
+                <div className="text-2xl text-zinc-600 font-medium mb-2">
+                  🔊 {cbseTeluguData.numbers[numberIndex]?.english}
+                </div>
+                <div className="text-lg text-zinc-500 mb-4">
+                  Number: {cbseTeluguData.numbers[numberIndex]?.number}
+                </div>
+                <div className="flex justify-center gap-3 mb-4">
+                  <button
+                    onClick={() =>
+                      speakTelugu(
+                        cbseTeluguData.numbers[numberIndex]?.telugu || "",
+                      )
+                    }
+                    className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-2xl text-lg font-bold"
+                  >
+                    🔊 వినండి
+                  </button>
+                </div>
+                <div className="grid grid-cols-5 gap-2 mt-4">
+                  {cbseTeluguData.numbers.map((n, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setNumberIndex(idx)}
+                      className={`p-2 rounded-xl border-2 transition transform hover:scale-110 ${
+                        idx === numberIndex
+                          ? "bg-cyan-400 text-white border-cyan-500"
+                          : "bg-white border-cyan-200"
+                      }`}
+                    >
+                      <div className="text-xl font-bold">{n.telugu}</div>
+                      <div className="text-xs">{n.number}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Days and Months Section */}
+          {activeSection === "days-months" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-pink-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-pink-700">
+                📅 రోజులు & నెలలు
+              </h2>
+              <div className="flex justify-center gap-4 mb-4">
+                <button
+                  onClick={() => setDayIndex(dayIndex)}
+                  className={`px-6 py-2 rounded-xl font-bold ${dayIndex !== null ? "bg-pink-400 text-white" : "bg-pink-100"}`}
+                >
+                  రోజులు
+                </button>
+                <button
+                  onClick={() => setDayIndex(null)}
+                  className={`px-6 py-2 rounded-xl font-bold ${dayIndex === null ? "bg-pink-400 text-white" : "bg-pink-100"}`}
+                >
+                  నెలలు
+                </button>
+              </div>
+              {dayIndex !== null ? (
+                <div className="grid grid-cols-4 gap-2">
+                  {cbseTeluguData.daysOfWeek.map((d, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setDayIndex(idx)}
+                      className={`p-3 rounded-xl border-2 transition transform hover:scale-110 ${
+                        idx === dayIndex
+                          ? "bg-pink-400 text-white border-pink-500"
+                          : "bg-white border-pink-200"
+                      }`}
+                    >
+                      <div className="font-bold">{d.telugu}</div>
+                      <div className="text-xs">{d.english}</div>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2">
+                  {cbseTeluguData.months.map((m, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setMonthIndex(idx)}
+                      className={`p-3 rounded-xl border-2 transition transform hover:scale-110 ${
+                        idx === monthIndex
+                          ? "bg-pink-400 text-white border-pink-500"
+                          : "bg-white border-pink-200"
+                      }`}
+                    >
+                      <div className="font-bold text-sm">{m.telugu}</div>
+                      <div className="text-xs">{m.english}</div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

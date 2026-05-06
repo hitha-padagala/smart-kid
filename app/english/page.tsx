@@ -6,8 +6,17 @@ import moralStoriesData from "@/data/moral-stories.json";
 import ramayanaStoriesData from "@/data/ramayana.json";
 import krishnaStoriesData from "@/data/krishna-stories.json";
 import disneyStoriesData from "@/data/disney-stories.json";
+import cbseEnglishData from "@/data/cbse-english-3rd.json";
 
-type Section = "grammar" | "moral-stories" | "ramayana" | "krishna" | "disney";
+type Section =
+  | "grammar"
+  | "moral-stories"
+  | "ramayana"
+  | "krishna"
+  | "disney"
+  | "cbse-topics"
+  | "vocabulary"
+  | "reading-comprehension";
 
 type GrammarQuestion = {
   question: string;
@@ -76,6 +85,21 @@ const sectionConfig: Record<
     emoji: "👑",
     color: "from-pink-400 to-rose-500",
   },
+  "cbse-topics": {
+    label: "CBSE Topics",
+    emoji: "🎓",
+    color: "from-indigo-400 to-purple-500",
+  },
+  vocabulary: {
+    label: "Vocabulary",
+    emoji: "🔤",
+    color: "from-cyan-400 to-blue-500",
+  },
+  "reading-comprehension": {
+    label: "Reading Comp.",
+    emoji: "📖",
+    color: "from-violet-400 to-purple-500",
+  },
 };
 
 export default function EnglishPage() {
@@ -85,6 +109,9 @@ export default function EnglishPage() {
   const [ramayanaIndex, setRamayanaIndex] = useState(0);
   const [krishnaIndex, setKrishnaIndex] = useState(0);
   const [disneyIndex, setDisneyIndex] = useState(0);
+  const [readingCompIndex, setReadingCompIndex] = useState(0);
+  const [vocabIndex, setVocabIndex] = useState(0);
+  const [cbseTopicIndex, setCbseTopicIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [result, setResult] = useState("");
   const [showExplanation, setShowExplanation] = useState(false);
@@ -587,6 +614,160 @@ export default function EnglishPage() {
               "from-pink-50 to-rose-50",
               "👑 Disney Princess Stories",
             )}
+
+          {/* CBSE Topics Section */}
+          {activeSection === "cbse-topics" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-indigo-200">
+              <h2 className="text-3xl font-bold text-center mb-6 text-indigo-700">
+                🎓 CBSE 3rd Grade English Topics
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                {cbseEnglishData.cbseEnglishTopics.map((topic, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCbseTopicIndex(idx)}
+                    className={`p-4 rounded-2xl border-4 transition transform hover:scale-105 ${
+                      idx === cbseTopicIndex
+                        ? "bg-gradient-to-br from-indigo-400 to-purple-500 text-white border-white shadow-lg"
+                        : "bg-indigo-50 border-indigo-200 hover:border-indigo-400 text-gray-800"
+                    }`}
+                  >
+                    <div className="text-4xl mb-2">{topic.emoji}</div>
+                    <div className="font-bold text-sm">{topic.title}</div>
+                  </button>
+                ))}
+              </div>
+              <div className="mt-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-4">
+                <h3 className="font-bold text-lg mb-2 text-indigo-800">
+                  {cbseEnglishData.cbseEnglishTopics[cbseTopicIndex]?.title}
+                </h3>
+                <p className="text-gray-700">
+                  {
+                    cbseEnglishData.cbseEnglishTopics[cbseTopicIndex]
+                      ?.description
+                  }
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Vocabulary Section */}
+          {activeSection === "vocabulary" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-cyan-200">
+              <h2 className="text-3xl font-bold text-center mb-6 text-cyan-700">
+                🔤 Vocabulary Builder
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-80 overflow-y-auto">
+                {cbseEnglishData.vocabularyWords.map((word, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-3 rounded-xl border-2 transition transform hover:scale-105 ${
+                      idx === vocabIndex
+                        ? "bg-gradient-to-br from-cyan-400 to-blue-500 text-white border-white shadow-lg"
+                        : "bg-cyan-50 border-cyan-200 hover:border-cyan-400 text-gray-800"
+                    }`}
+                    onClick={() => setVocabIndex(idx)}
+                  >
+                    <div className="text-2xl mb-1">{word.emoji}</div>
+                    <div className="font-bold text-sm">{word.word}</div>
+                    <div className="text-xs">{word.meaning}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-4">
+                <h3 className="font-bold text-xl mb-2 text-cyan-800">
+                  {cbseEnglishData.vocabularyWords[vocabIndex]?.word}
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Meaning:</strong>{" "}
+                  {cbseEnglishData.vocabularyWords[vocabIndex]?.meaning}
+                </p>
+                <p className="text-gray-600 italic">
+                  Use in a sentence to help remember!
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Reading Comprehension Section */}
+          {activeSection === "reading-comprehension" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-violet-200">
+              <h2 className="text-3xl font-bold text-center mb-6 text-violet-700">
+                📖 Reading Comprehension
+              </h2>
+              <div className="flex flex-wrap justify-center gap-2 mb-4">
+                {cbseEnglishData.readingComprehension.map((story, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setReadingCompIndex(idx)}
+                    className={`px-3 py-2 rounded-xl text-sm font-bold transition transform hover:scale-110 ${
+                      idx === readingCompIndex
+                        ? "bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-lg"
+                        : "bg-gray-100 hover:bg-gray-200"
+                    }`}
+                  >
+                    {story.emoji} {story.title}
+                  </button>
+                ))}
+              </div>
+              <div className="bg-gradient-to-r from-violet-50 to-purple-50 rounded-2xl p-4">
+                <h3 className="font-bold text-xl mb-2 text-violet-800">
+                  {
+                    cbseEnglishData.readingComprehension[readingCompIndex]
+                      ?.title
+                  }
+                </h3>
+                <div className="bg-white rounded-xl p-4 mb-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    {
+                      cbseEnglishData.readingComprehension[readingCompIndex]
+                        ?.story
+                    }
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-bold text-violet-700 mb-2">Questions:</h4>
+                  {cbseEnglishData.readingComprehension[
+                    readingCompIndex
+                  ]?.questions.map((q, qIdx) => (
+                    <div key={qIdx} className="mb-3 bg-white rounded-lg p-3">
+                      <p className="font-medium mb-2">
+                        {qIdx + 1}. {q.q}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {q.options.map((opt, oIdx) => (
+                          <button
+                            key={oIdx}
+                            onClick={() =>
+                              setResult(
+                                opt === q.answer
+                                  ? "🎉 Correct!"
+                                  : `❌ Wrong! Answer: ${q.answer}`,
+                              )
+                            }
+                            className="px-3 py-1 bg-violet-100 hover:bg-violet-200 rounded-lg text-sm font-medium"
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {result && (
+                  <div
+                    className={`mt-4 text-center text-lg font-bold p-3 rounded-xl ${
+                      result.includes("Correct")
+                        ? "bg-green-100 text-green-700"
+                        : "bg-red-100 text-red-700"
+                    }`}
+                  >
+                    {result}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Back to Home */}
           <div className="text-center mt-6">

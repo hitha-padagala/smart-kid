@@ -1,0 +1,423 @@
+{
+  "textbook": "Math-Mela (NCERT CBSE 3rd Grade)",
+  "chapters": [
+    {
+      "id": "where-to-look-from",
+      "title": "Where to Look From",
+      "description": "Understanding views of 3D shapes, mirror images, and drawing",
+      "emoji": "👀",
+      "questions": [
+        {
+          "q": "How many faces does a cube have?",
+          "options": ["4", "6", "8"],
+          "answer": "6"
+        },
+        {
+          "q": "From which view do we see only one side of a table?",
+          "options": ["Top view", "Side view", "Front view"],
+          "answer": "Top view"
+        },
+        {
+          "q": "What do you see in a mirror?",
+          "options": ["Real image", "Reflection", "Shadow"],
+          "answer": "Reflection"
+        },
+        {
+          "q": "How many edges does a cuboid have?",
+          "options": ["8", "12", "16"],
+          "answer": "12"
+        },
+        {
+          "q": "When we fold paper, what do we get?",
+          "options": ["Circle", "Shape", "Triangle"],
+          "answer": "Shape"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "A dice is an example of a ____ shape.", "answer": "cube" },
+        { "q": "We can see our ____ in the mirror.", "answer": "reflection" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Riya looks at a table from the top. How many legs can she see?",
+          "options": ["1", "2", "4"],
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "fun-with-numbers",
+      "title": "Fun with Numbers",
+      "description": "Numbers up to 1000, place value, even/odd",
+      "emoji": "🔢",
+      "questions": [
+        {
+          "q": "What is the numeral for Three Hundred Four?",
+          "options": ["304", "340", "403"],
+          "answer": "304"
+        },
+        {
+          "q": "What is the place value of 5 in 572?",
+          "options": ["500", "50", "5"],
+          "answer": "500"
+        },
+        {
+          "q": "Which is the smallest 3-digit number?",
+          "options": ["100", "101", "99"],
+          "answer": "100"
+        },
+        {
+          "q": "What number comes after 199?",
+          "options": ["200", "198", "201"],
+          "answer": "200"
+        },
+        {
+          "q": "Is 456 an even or odd number?",
+          "options": ["Even", "Odd", "Both"],
+          "answer": "Even"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "The greatest 3-digit number is ____.", "answer": "999" },
+        { "q": "In 729, the digit in hundreds place is ____.", "answer": "7" }
+      ],
+      "wordProblems": [
+        {
+          "q": "Rohan has 235 stamps. How many hundreds are there?",
+          "options": ["2", "3", "5"],
+          "answer": "2"
+        },
+        {
+          "q": "What is 100 more than 350?",
+          "options": ["400", "450", "351"],
+          "answer": "450"
+        }
+      ]
+    },
+    {
+      "id": "give-and-take",
+      "title": "Give and Take (Addition)",
+      "description": "Addition with and without carry",
+      "emoji": "➕",
+      "questions": [
+        {
+          "q": "What is 45 + 37?",
+          "options": ["82", "72", "81"],
+          "answer": "82"
+        },
+        {
+          "q": "125 + 234 = ?",
+          "options": ["359", "369", "349"],
+          "answer": "359"
+        },
+        {
+          "q": "200 + 150 =",
+          "options": ["350", "300", "450"],
+          "answer": "350"
+        },
+        {
+          "q": "Add the greatest 3-digit and smallest 3-digit number",
+          "options": ["1099", "1098", "1198"],
+          "answer": "1099"
+        }
+      ],
+      "fillInTheBlanks": [
+        { "q": "The sum of 100 and 200 is ____.", "answer": "300" },
+        {
+          "q": "When we add two odd numbers, we get a ____ number.",
+          "answer": "even"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "A shop has 145 apples. It receives 235 more. Total apples?",
+          "options": ["380", "370", "390"],
+          "answer": "380"
+        },
+        {
+          "q": "There are 236 boys and 158 girls in school. Total students?",
+          "options": ["394", "384", "494"],
+          "answer": "394"
+        }
+      ]
+    },
+    {
+      "id": "long-and-short",
+      "title": "Long and Short",
+      "description": "Measurement of length in cm and m",
+      "emoji": "📏",
+      "questions": [
+        {
+          "q": "100 cm = ____ m",
+          "options": ["1", "10", "100"],
+          "answer": "1"
+        },
+        {
+          "q": "A pencil is about 15 ____ long",
+          "options": ["cm", "m", "mm"],
+          "answer": "cm"
+        },
+        {
+          "q": "Which is longer? 50cm or 1m?",
+          "options": ["1m", "Both equal", "50cm"],
+          "answer": "1m"
+        },
+        {
+          "q": "Your classroom blackboard is about ____ meters wide",
+          "options": ["2-3", "5-6", "10-15"],
+          "answer": "2-3"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "A ribbon is 2m long. Another ribbon is 50cm. Total length?",
+          "options": ["250cm", "200cm", "300cm"],
+          "answer": "250cm"
+        },
+        {
+          "q": "Plant A is 45cm tall. Plant B is 32cm tall. Difference?",
+          "options": ["13cm", "77cm", "15cm"],
+          "answer": "13cm"
+        }
+      ]
+    },
+    {
+      "id": "shapes-and-designs",
+      "title": "Shapes and Designs",
+      "description": "2D shapes, corners, sides, patterns",
+      "emoji": "🔷",
+      "questions": [
+        {
+          "q": "How many sides does a triangle have?",
+          "options": ["3", "4", "5"],
+          "answer": "3"
+        },
+        {
+          "q": "How many corners does a square have?",
+          "options": ["4", "5", "6"],
+          "answer": "4"
+        },
+        {
+          "q": "Circle has ______ sides",
+          "options": ["0", "1", "Many"],
+          "answer": "0"
+        },
+        {
+          "q": "Which shape has 3 sides?",
+          "options": ["Triangle", "Square", "Rectangle"],
+          "answer": "Triangle"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "How many corners in 3 squares?",
+          "options": ["12", "3", "9"],
+          "answer": "12"
+        },
+        {
+          "q": "Find the number of sides in 2 triangles and 1 square",
+          "options": ["10", "11", "12"],
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "id": "time-goes-on",
+      "title": "Time Goes On",
+      "description": "Reading time, days, months",
+      "emoji": "⏰",
+      "questions": [
+        {
+          "q": "How many days are there in a week?",
+          "options": ["7", "5", "10"],
+          "answer": "7"
+        },
+        {
+          "q": "How many months are there in a year?",
+          "options": ["12", "10", "15"],
+          "answer": "12"
+        },
+        {
+          "q": "The day after Sunday is ____",
+          "options": ["Monday", "Saturday", "Friday"],
+          "answer": "Monday"
+        },
+        {
+          "q": "Which month comes after March?",
+          "options": ["April", "February", "May"],
+          "answer": "April"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "If today is Wednesday, tomorrow is?",
+          "options": ["Thursday", "Tuesday", "Friday"],
+          "answer": "Thursday"
+        },
+        {
+          "q": "How many days between Monday and Thursday?",
+          "options": ["2", "3", "4"],
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "id": "who-is-heavier",
+      "title": "Who is Heavier?",
+      "description": "Weight measurement, grams and kilograms",
+      "emoji": "⚖️",
+      "questions": [
+        {
+          "q": "1000 grams = ____ kg",
+          "options": ["1", "10", "100"],
+          "answer": "1"
+        },
+        {
+          "q": "Which is heavier? 1kg of cotton or 1kg of iron?",
+          "options": ["Both equal", "Cotton", "Iron"],
+          "answer": "Both equal"
+        },
+        {
+          "q": "Your school bag weighs about ____ kg",
+          "options": ["2-3", "5-10", "1-2"],
+          "answer": "2-3"
+        },
+        {
+          "q": "Weighing scale shows ____ for heavy objects",
+          "options": ["More", "Less", "Same"],
+          "answer": "More"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "Rice is 500g. Dal is 250g. Total weight?",
+          "options": ["750g", "250g", "500g"],
+          "answer": "750g"
+        },
+        {
+          "q": "A watermelon is 2kg. How many grams?",
+          "options": ["2000g", "200g", "20g"],
+          "answer": "2000g"
+        }
+      ]
+    },
+    {
+      "id": "how-many-times",
+      "title": "How Many Times?",
+      "description": "Multiplication tables 2-10, division",
+      "emoji": "✖️",
+      "questions": [
+        { "q": "2 × 3 = ?", "options": ["6", "5", "8"], "answer": "6" },
+        { "q": "5 × 4 = ?", "options": ["20", "15", "25"], "answer": "20" },
+        {
+          "q": "There are 3 rows of chairs. 4 chairs in each row. Total?",
+          "options": ["12", "7", "8"],
+          "answer": "12"
+        },
+        {
+          "q": "Repeated addition is same as ____",
+          "options": ["Multiplication", "Division", "Subtraction"],
+          "answer": "Multiplication"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "There are 4 flowers. Each has 3 petals. Total petals?",
+          "options": ["12", "7", "16"],
+          "answer": "12"
+        },
+        {
+          "q": "5 packets with 6 pencils each. Total pencils?",
+          "options": ["30", "11", "35"],
+          "answer": "30"
+        }
+      ]
+    },
+    {
+      "id": "can-we-share",
+      "title": "Can We Share?",
+      "description": "Division - sharing equally",
+      "emoji": "➗",
+      "questions": [
+        { "q": "12 ÷ 3 = ?", "options": ["4", "3", "5"], "answer": "4" },
+        { "q": "15 ÷ 5 = ?", "options": ["3", "5", "10"], "answer": "3" },
+        {
+          "q": "Sharing 12 sweets among 4 friends. Each gets?",
+          "options": ["3", "4", "8"],
+          "answer": "3"
+        },
+        {
+          "q": "Division means ____",
+          "options": ["Sharing", "Adding", "Multiplying"],
+          "answer": "Sharing"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "24 students in 4 groups. Students per group?",
+          "options": ["6", "8", "20"],
+          "answer": "6"
+        },
+        {
+          "q": "15 toffees shared among 3 children. Each gets?",
+          "options": ["5", "3", "18"],
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "rupees-and-paise",
+      "title": "Rupees and Paise",
+      "description": "Money, addition and subtraction",
+      "emoji": "💰",
+      "questions": [
+        {
+          "q": "100 paise = Rs.____",
+          "options": ["1", "10", "100"],
+          "answer": "1"
+        },
+        {
+          "q": "Rs. 5 + Rs. 3 = Rs.____",
+          "options": ["8", "2", "15"],
+          "answer": "8"
+        },
+        {
+          "q": "Which coin has the highest value?",
+          "options": ["Rs. 5", "Rs. 2", "Rs. 1"],
+          "answer": "Rs. 5"
+        },
+        {
+          "q": "How many 50 paise make one rupee?",
+          "options": ["2", "50", "1"],
+          "answer": "2"
+        }
+      ],
+      "wordProblems": [
+        {
+          "q": "Mango costs Rs. 15, Apple costs Rs. 12. Total?",
+          "options": ["Rs. 27", "Rs. 2", "Rs. 3"],
+          "answer": "Rs. 27"
+        },
+        {
+          "q": "Toy costs Rs. 50. You pay Rs. 100. Change?",
+          "options": ["Rs. 50", "Rs. 40", "Rs. 60"],
+          "answer": "Rs. 50"
+        }
+      ]
+    }
+  ],
+  "revisionQuestions": {
+    "addition": [
+      { "q": "Calculate: 345 + 234", "answer": "579" },
+      { "q": "What is the sum of 100 and 500?", "answer": "600" }
+    ],
+    "subtraction": [
+      { "q": "Calculate: 678 - 345", "answer": "333" },
+      { "q": "What is 500 - 250?", "answer": "250" }
+    ],
+    "multiplication": [
+      { "q": "Calculate: 7 × 8", "answer": "56" },
+      { "q": "3 groups of 5 toys. Total?", "answer": "15" }
+    ]
+  }
+}

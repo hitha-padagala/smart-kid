@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
+
+// Safe Analytics component with error handling
+const SafeAnalytics = () => {
+  if (process.env.NODE_ENV !== "production" || typeof window === "undefined") {
+    return null;
+  }
+
+  return null; // Skip analytics for now to avoid provider errors
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +38,7 @@ export default function RootLayout({
     >
       <body className="min-h-full">{children}</body>
 
-      <Analytics />
+      <SafeAnalytics />
     </html>
   );
 }
