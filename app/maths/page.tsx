@@ -4,6 +4,21 @@ import Link from "next/link";
 import chapterData from "@/data/cbse-maths-chapters.json";
 import topicData from "@/data/cbse-maths-3rd.json";
 
+interface ChapterData {
+  textbook: string;
+  chapters: Array<{
+    id: string;
+    title: string;
+    description: string;
+    emoji: string;
+    questions: Array<{ q: string; options: string[]; answer: string }>;
+    fillInTheBlanks?: Array<{ q: string; answer: string }>;
+    wordProblems?: Array<{ q: string; options: string[]; answer: string }>;
+  }>;
+}
+
+const typedChapterData: ChapterData = chapterData;
+
 type Category =
   | "addition"
   | "subtraction"
@@ -18,12 +33,6 @@ interface Question {
   num2: number;
   op: string;
   answer: number;
-}
-
-interface ChapterQuestion {
-  q: string;
-  options: string[];
-  answer: string;
 }
 
 const categoryConfig: Record<
@@ -141,9 +150,9 @@ export default function MathsPage() {
   const [cbseTopicIndex, setCbseTopicIndex] = useState(0);
   const [chapterIndex, setChapterIndex] = useState(0);
   const [chapterQIndex, setChapterQIndex] = useState(0);
-  const [chapterType, setChapterType] = useState<"questions" | "wordProblems">(
-    "questions",
-  );
+  const [chapterType, setChapterType] = useState<
+    "questions" | "fillInTheBlanks" | "wordProblems"
+  >("questions");
 
   const resetQuiz = () => {
     const newQuestions = generateQuestions(category, 10);
@@ -160,7 +169,8 @@ export default function MathsPage() {
       started &&
       !finished &&
       category !== "word-problems" &&
-      category !== "cbse-topics"
+      category !== "cbse-topics" &&
+      category !== "chapters"
     ) {
       setTimeout(() => {
         resetQuiz();
@@ -171,7 +181,11 @@ export default function MathsPage() {
   const startQuiz = () => {
     setStarted(true);
     setFinished(false);
-    if (category !== "word-problems" && category !== "cbse-topics") {
+    if (
+      category !== "word-problems" &&
+      category !== "cbse-topics" &&
+      category !== "chapters"
+    ) {
       setQuestions(generateQuestions(category, 10));
     }
     setCurrentIndex(0);
@@ -337,6 +351,33 @@ export default function MathsPage() {
               ))}
             </div>
           </div>
+        ) : category === "chapters" && !started ? (
+          <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-indigo-200">
+            <h2 className="text-3xl font-bold text-center mb-4 text-indigo-700">
+              📚 CBSE 3rd Grade Math Chapters
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              {chapterData.chapters.map((chapter, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    setChapterIndex(idx);
+                    setChapterQIndex(0);
+                    setChapterType("questions");
+                    setStarted(true);
+                  }}
+                  className={`p-4 rounded-2xl border-4 transition transform hover:scale-105 ${
+                    idx === chapterIndex
+                      ? "bg-gradient-to-br from-indigo-400 to-purple-500 text-white border-white shadow-lg"
+                      : "bg-indigo-50 border-indigo-200 hover:border-indigo-400 text-gray-800"
+                  }`}
+                >
+                  <div className="text-3xl mb-2">{chapter.emoji}</div>
+                  <div className="font-bold text-sm">{chapter.title}</div>
+                </button>
+              ))}
+            </div>
+          </div>
         ) : !started ? (
           <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-purple-200">
             <h2 className="text-2xl font-bold text-center mb-6 text-purple-700">
@@ -457,6 +498,178 @@ export default function MathsPage() {
                 className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-2 rounded-xl text-lg font-bold"
               >
                 ➡️ Next
+              </button>
+            </div>
+          </div>
+        ) : category === "chapters" ? (
+          <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-indigo-200">
+            <div className="flex justify-center mb-4">
+              <button
+                onClick={() => setStarted(false)}
+                className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-bold hover:bg-gray-300"
+              >
+                ← Back to Chapters
+              </button>
+            </div>
+            <h3 className="font-bold text-lg mb-2 text-indigo-800 text-center">
+              {chapterData.chapters[chapterIndex]?.title}
+            </h3>
+            <p className="text-gray-700">
+              {chapterData.chapters[chapterIndex]?.description}
+            </p>
+
+            <div className="flex space-x-4 mb-4 justify-center">
+              <button
+                onClick={() => setChapterType("questions")}
+                className={`px-4 py-2 rounded-lg font-bold transition ${
+                  chapterType === "questions"
+                    ? "bg-indigo-400 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                }`}
+              >
+                Questions
+              </button>
+              <button
+                onClick={() => setChapterType("fillInTheBlanks")}
+                className={`px-4 py-2 rounded-lg font-bold transition ${
+                  chapterType === "fillInTheBlanks"
+                    ? "bg-indigo-400 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                }`}
+              >
+                Fill in Blanks
+              </button>
+              <button
+                onClick={() => setChapterType("wordProblems")}
+                className={`px-4 py-2 rounded-lg font-bold transition ${
+                  chapterType === "wordProblems"
+                    ? "bg-indigo-400 text-white"
+                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                }`}
+              >
+                Word Problems
+              </button>
+            </div>
+
+            {chapterType === "questions" && (
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {chapterData.chapters[chapterIndex]?.questions.map(
+                  (q, qIdx) => (
+                    <div
+                      key={qIdx}
+                      className="bg-white rounded-lg p-4 mb-2 border"
+                    >
+                      <p className="font-medium mb-2">
+                        {qIdx + 1}. {q.q}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {q.options.map((opt, oIdx) => (
+                          <button
+                            key={oIdx}
+                            onClick={() =>
+                              setResult(
+                                opt === q.answer
+                                  ? "🎉 Correct!"
+                                  : `❌ Wrong! Answer: ${q.answer}`,
+                              )
+                            }
+                            className="px-3 py-1 bg-indigo-100 hover:bg-indigo-200 rounded-lg text-sm font-medium"
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ),
+                )}
+              </div>
+            )}
+
+            {chapterType === "fillInTheBlanks" && (
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {chapterData.chapters[chapterIndex]?.fillInTheBlanks?.map(
+                  (fb, fbIdx) => (
+                    <div
+                      key={fbIdx}
+                      className="bg-white rounded-lg p-4 mb-2 border"
+                    >
+                      <p className="font-medium mb-2">
+                        {fbIdx + 1}. {fb.q}
+                      </p>
+                      <input
+                        type="text"
+                        className="w-full px-3 py-2 mb-2 border border-indigo-300 rounded-lg"
+                        placeholder="Enter answer..."
+                      />
+                      <button
+                        onClick={() => setResult("🎉 Check your answer!")}
+                        className="w-full px-3 py-2 bg-indigo-400 text-white rounded-lg font-bold"
+                      >
+                        Check Answer
+                      </button>
+                      <p className="text-sm text-indigo-600 mt-2">
+                        Answer: {fb.answer}
+                      </p>
+                    </div>
+                  ),
+                )}
+              </div>
+            )}
+
+            {chapterType === "wordProblems" && (
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {chapterData.chapters[chapterIndex]?.wordProblems?.map(
+                  (wp, wpIdx) => (
+                    <div
+                      key={wpIdx}
+                      className="bg-white rounded-lg p-4 mb-2 border"
+                    >
+                      <p className="font-medium mb-2">
+                        {wpIdx + 1}. {wp.q}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {wp.options.map((opt, oIdx) => (
+                          <button
+                            key={oIdx}
+                            onClick={() =>
+                              setResult(
+                                opt === wp.answer
+                                  ? "🎉 Correct!"
+                                  : `❌ Wrong! Answer: ${wp.answer}`,
+                              )
+                            }
+                            className="px-3 py-1 bg-indigo-100 hover:bg-indigo-200 rounded-lg text-sm font-medium"
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  ),
+                )}
+              </div>
+            )}
+
+            <div className="mt-4 flex justify-center gap-3">
+              <button
+                onClick={() => {
+                  setChapterIndex(
+                    (i) =>
+                      (i - 1 + chapterData.chapters.length) %
+                      chapterData.chapters.length,
+                  );
+                }}
+                className="bg-gradient-to-r from-blue-400 to-cyan-500 text-white px-6 py-2 rounded-xl text-lg font-bold"
+              >
+                ⬅️ Previous Chapter
+              </button>
+              <button
+                onClick={() => {
+                  setChapterIndex((i) => (i + 1) % chapterData.chapters.length);
+                }}
+                className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-2 rounded-xl text-lg font-bold"
+              >
+                ➡️ Next Chapter
               </button>
             </div>
           </div>

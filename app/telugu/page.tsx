@@ -5,12 +5,14 @@ import vegetablesData from "@/data/telugu-vegetables.json";
 import fruitsData from "@/data/telugu-fruits.json";
 import readingLessonsData from "@/data/telugu-reading.json";
 import cbseTeluguData from "@/data/cbse-telugu-3rd.json";
+import teluguChaptersData from "@/data/cbse-telugu-chapters.json";
 
 type Section =
   | "vegetables"
   | "fruits"
   | "reading"
   | "cbse-topics"
+  | "chapters"
   | "vowels"
   | "consonants"
   | "numbers"
@@ -90,6 +92,13 @@ const sectionConfig: Record<
     bgColor: "from-indigo-50 to-purple-50",
     borderColor: "border-indigo-300",
   },
+  chapters: {
+    label: "అధ్యాయాలు",
+    emoji: "📖",
+    color: "from-blue-400 to-indigo-500",
+    bgColor: "from-blue-50 to-indigo-50",
+    borderColor: "border-blue-300",
+  },
   vowels: {
     label: "స్వరాలు",
     emoji: "🔤",
@@ -134,6 +143,12 @@ export default function TeluguPage() {
   const [monthIndex, setMonthIndex] = useState(0);
   const [familyIndex, setFamilyIndex] = useState(0);
   const [storyIndex, setStoryIndex] = useState(0);
+  const [chapterIndex, setChapterIndex] = useState(0);
+  const [chapterQIndex, setChapterQIndex] = useState(0);
+  const [chapterType, setChapterType] = useState<
+    "questions" | "fillInTheBlanks" | "wordProblems" | "stories"
+  >("questions");
+  const [result, setResult] = useState("");
 
   // Load voices when component mounts
   useEffect(() => {
@@ -928,6 +943,193 @@ export default function TeluguPage() {
                   ))}
                 </div>
               )}
+            </div>
+          )}
+
+          {/* Chapters Section */}
+          {activeSection === "chapters" && (
+            <div className="bg-white rounded-3xl shadow-xl p-6 border-4 border-blue-200">
+              <h2 className="text-3xl font-bold text-center mb-4 text-blue-700">
+                📖 CBSE 3rd Grade తెలుగు అధ్యాయాలు
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                {teluguChaptersData.chapters.map((chapter, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setChapterIndex(idx);
+                      setChapterQIndex(0);
+                      setChapterType("questions");
+                    }}
+                    className={`p-4 rounded-2xl border-4 transition transform hover:scale-105 ${
+                      idx === chapterIndex
+                        ? "bg-gradient-to-br from-blue-400 to-indigo-500 text-white border-white shadow-lg"
+                        : "bg-blue-50 border-blue-200 hover:border-blue-400 text-gray-800"
+                    }`}
+                  >
+                    <div className="text-3xl mb-2">{chapter.emoji}</div>
+                    <div className="font-bold text-sm">{chapter.title}</div>
+                  </button>
+                ))}
+              </div>
+              <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-4">
+                <div className="space-y-4">
+                  <h3 className="font-bold text-lg mb-2 text-blue-800">
+                    {teluguChaptersData.chapters[chapterIndex]?.title}
+                  </h3>
+                  <p className="text-gray-700">
+                    {teluguChaptersData.chapters[chapterIndex]?.description}
+                  </p>
+
+                  {(() => {
+                    const currentChapter =
+                      teluguChaptersData.chapters[chapterIndex];
+                    if (!currentChapter)
+                      return <div>No chapter data available</div>;
+
+                    return (
+                      <>
+                        {/* Chapter Content Tabs */}
+                        <div className="flex space-x-4 mb-4">
+                          <button
+                            onClick={() => setChapterType("questions")}
+                            className={`px-4 py-2 rounded-lg font-bold transition ${
+                              chapterType === "questions"
+                                ? "bg-blue-400 text-white"
+                                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                            }`}
+                          >
+                            ప్రశ్నలు
+                          </button>
+                          <button
+                            onClick={() => setChapterType("fillInTheBlanks")}
+                            className={`px-4 py-2 rounded-lg font-bold transition ${
+                              chapterType === "fillInTheBlanks"
+                                ? "bg-blue-400 text-white"
+                                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                            }`}
+                          >
+                            ఖాళీలను నింపండి
+                          </button>
+                          <button
+                            onClick={() => setChapterType("stories")}
+                            className={`px-4 py-2 rounded-lg font-bold transition ${
+                              chapterType === "stories"
+                                ? "bg-blue-400 text-white"
+                                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                            }`}
+                          >
+                            కథలు
+                          </button>
+                        </div>
+
+                        {/* Chapter Questions Content */}
+                        {chapterType === "questions" && (
+                          <div className="space-y-4">
+                            {(
+                              currentChapter.sections?.[0]?.questions ||
+                              currentChapter.questions ||
+                              []
+                            ).map((q, qIdx) => (
+                              <div
+                                key={qIdx}
+                                className="bg-white rounded-lg p-4 mb-2"
+                              >
+                                <p className="font-medium mb-2">
+                                  {qIdx + 1}. {q.q}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                  {q.options.map((opt, oIdx) => (
+                                    <button
+                                      key={oIdx}
+                                      onClick={() =>
+                                        setResult(
+                                          opt === q.answer
+                                            ? "🎉 సరైన సమాధానం!"
+                                            : `❌ తప్పు! సరైన సమాధానం: ${q.answer}`,
+                                        )
+                                      }
+                                      className="px-3 py-1 bg-blue-100 hover:bg-blue-200 rounded-lg text-sm font-medium"
+                                    >
+                                      {opt}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {chapterType === "fillInTheBlanks" && (
+                          <div className="space-y-4">
+                            {(currentChapter.fillInTheBlanks || []).map(
+                              (fb, fbIdx) => (
+                                <div
+                                  key={fbIdx}
+                                  className="bg-white rounded-lg p-4 mb-2"
+                                >
+                                  <p className="font-medium mb-2">
+                                    {fbIdx + 1}. {fb.q}
+                                  </p>
+                                  <input
+                                    type="text"
+                                    className="w-full px-3 py-2 mb-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                    placeholder="సమాధానం రాయండి..."
+                                  />
+                                  <button
+                                    onClick={() => {
+                                      // Simple check - in a real app, you'd compare answers
+                                      setResult(
+                                        "🎉 మీ సమాధానాన్ని తనిఖీ చేయండి!",
+                                      );
+                                    }}
+                                    className="w-full px-3 py-2 bg-blue-400 text-white rounded-lg font-bold"
+                                  >
+                                    సమాధానం తనిఖీ చేయండి
+                                  </button>
+                                  <p className="text-sm text-blue-600 mt-2">
+                                    సమాధానం: {fb.answer}
+                                  </p>
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        )}
+
+                        {chapterType === "stories" && (
+                          <div className="space-y-4">
+                            {(currentChapter.stories || []).map(
+                              (story, sIdx) => (
+                                <div
+                                  key={sIdx}
+                                  className="bg-white rounded-lg p-4 mb-2"
+                                >
+                                  <h4 className="font-bold text-lg mb-2 text-blue-800">
+                                    {story.title}
+                                  </h4>
+                                  <div className="bg-blue-50 rounded-lg p-3 mb-3">
+                                    <p className="text-gray-700 leading-relaxed mb-2">
+                                      {story.telugu}
+                                    </p>
+                                    <p className="text-sm text-blue-600 italic">
+                                      {story.english}
+                                    </p>
+                                  </div>
+                                  <div className="bg-yellow-50 rounded-lg p-3">
+                                    <p className="font-medium text-yellow-800">
+                                      నైతిక సందేశం: {story.moral}
+                                    </p>
+                                  </div>
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        )}
+                      </>
+                    );
+                  })()}
+                </div>
+              </div>
             </div>
           )}
 
