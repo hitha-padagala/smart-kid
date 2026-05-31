@@ -1,6 +1,11 @@
 # Smart Kid App
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Playful learning app for kids built with Next.js, featuring subject-wise pages for English, Maths, and Telugu.
+
+## Latest UI touch-up
+
+- Added supportive helper text on the home screen to guide kids toward subject cards.
+- Kept the colorful visual theme and interactions intact.
 
 ## Getting Started
 

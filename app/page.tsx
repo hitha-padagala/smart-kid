@@ -56,6 +56,9 @@ export default function Home() {
           <p className="text-2xl font-semibold text-purple-700 drop-shadow-sm">
             {"Hey Champ! Let\u0027s Learn & Play! \u{1F680}"}
           </p>
+          <p className="mt-3 text-base text-purple-600">
+            Pick a subject card and start today&apos;s mini adventure.
+          </p>
         </div>
 
         {/* Subject cards */}
